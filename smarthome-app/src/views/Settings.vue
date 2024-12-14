@@ -1,0 +1,6 @@
+<template>
+  <div>
+    <h1>Einstellungen</h1>
+    <p>Hier kannst du deine Smarthome-Geräte konfigurieren.</p>
+  </div>
+</template>

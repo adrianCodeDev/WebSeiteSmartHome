@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app">
+    <!-- Navbar wird nur angezeigt, wenn wir NICHT auf der Login-Seite sind -->
+    <!-- <Navbar v-if="$route.name !== 'Login'" /> -->
+    <Navbar />
+    <router-view />
+  </div>
 </template>
 
+  <!--
+  Die Navbar ist in App.vue außerhalb von <router-view /> definiert. Das bedeutet:
+
+  Sie wird immer angezeigt, unabhängig davon, welche Route aktiv ist.
+  Wenn du möchtest, dass sie nur auf bestimmten Routen erscheint, kannst du v-if verwenden
+  -->
+
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Navbar from "./components/Navbar.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
-  },
+    Navbar
+  }
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
