@@ -1,0 +1,8 @@
+<div class="device-card">
+    <h3>{{ device.name }}</h3>
+    <p>Status: <span :class="{ active: device.status === 'on' }">{{ device.status }}</span></p>
+    <button @click="toggleStatus">
+      {{ device.status === 'on' ? 'Ausschalten' : 'Einschalten' }}
+    </button>
+  </div>
+  

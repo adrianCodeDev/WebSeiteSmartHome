@@ -1,0 +1,6 @@
+[
+    { "id": 1, "name": "Wohnzimmerlampe", "status": "off" },
+    { "id": 2, "name": "Thermostat Küche", "status": "on" },
+    { "id": 3, "name": "Smart TV", "status": "off" }
+  ]
+  

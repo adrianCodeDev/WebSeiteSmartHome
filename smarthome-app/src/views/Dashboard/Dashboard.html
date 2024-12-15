@@ -1,5 +1,14 @@
 <div class="dashboard">
     <h1>Smarthome Dashboard</h1>
     <p>Hier siehst du alle Smarthome-Geräte:</p>
+  
+    <div class="device-list">
+      <DeviceCard
+        v-for="device in devices"
+        :key="device.id"
+        :device="device"
+        @status-changed="handleStatusChange"
+      />
+    </div>
   </div>
   
