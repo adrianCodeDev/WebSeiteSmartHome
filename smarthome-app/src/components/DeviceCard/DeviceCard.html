@@ -4,5 +4,6 @@
     <button @click="toggleStatus">
       {{ device.status === 'on' ? 'Ausschalten' : 'Einschalten' }}
     </button>
+    <button class="delete-btn" @click="$emit('remove-device')">Löschen</button>
   </div>
   

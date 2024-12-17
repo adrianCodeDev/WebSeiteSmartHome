@@ -1,13 +1,17 @@
 <div class="dashboard">
     <h1>Smarthome Dashboard</h1>
     <p>Hier siehst du alle Smarthome-Geräte:</p>
-  
+    <div class="add-device-form">
+      <input v-model="newDeviceName" placeholder="Gerätename eingeben" />
+      <button @click="addDevice">Gerät hinzufügen</button>
+    </div>
     <div class="device-list">
       <DeviceCard
         v-for="device in devices"
         :key="device.id"
         :device="device"
         @status-changed="handleStatusChange"
+        @remove-device="removeDevice(device.id)"
       />
     </div>
   </div>
